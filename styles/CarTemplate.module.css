@@ -1,0 +1,65 @@
+@keyframes downIconAnim {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(70px);
+  }
+  40% {
+    transform: translateY(78px);
+  }
+  60% {
+    transform: translateY(74px);
+  }
+}
+.CarTemplate {
+  height: 100vh;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  text-align: center;
+  padding: 100px 0 85px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.CarTemplate h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.CarTemplate h2 {
+  color: rgb(125, 125, 125);
+  font-size: 20px;
+  max-width: 500px;
+}
+.CarTemplate p {
+  font-size: 13px;
+  max-width: 700px;
+}
+.CarTemplate .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.CarTemplate button {
+  padding: 10px 45px;
+  font-size: 20px;
+  background-color: rgba(37, 37, 37, 0.6);
+  color: azure;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.5s;
+}
+.CarTemplate button:hover {
+  background-color: rgba(37, 37, 37, 0.8);
+  transform: scale(107%);
+}
+
+.CarTemplate .buttons div img {
+  width: 40px;
+  transform: translateY(70px);
+  animation: downIconAnim 1.5s ease 0s infinite normal none running;
+  cursor: pointer;
+}
