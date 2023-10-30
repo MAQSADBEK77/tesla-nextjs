@@ -1,5 +1,5 @@
-import CarTemplate from "@/components/CarTemplate.js";
-import NavBar from "@/components/NavBar";
+import CarTemplate from "../components/CarTemplate.js";
+import NavBar from "../components/NavBar";
 import Head from "next/head";
 import Model1 from "../public/images/model-y.jpg";
 import Model2 from "../public/images/model-3.jpg";

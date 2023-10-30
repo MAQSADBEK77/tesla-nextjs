@@ -1,4 +1,4 @@
-import { sideBarData } from "@/data/SideBar";
+import { sideBarData } from "../data/SideBar";
 import css from "../styles/Home.module.css";
 import Link from "next/link";
 import SideBar from "./SideBar";
