@@ -3,14 +3,7 @@ import downArrow from "../public/images/down-arrow.svg";
 import { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import {
-  Link,
-  Button,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-} from "react-scroll";
+import { Link, Element, animateScroll as scroll } from "react-scroll";
 function CarTemplate({
   imgSrc,
   carName,
@@ -27,12 +20,6 @@ function CarTemplate({
   useEffect(() => {
     AOS.init();
   }, []);
-  const [count, setCount] = useState(0);
-  const handleClick = () => {
-    const value2 = count + window.innerHeight;
-    window.scrollTo(count, value2);
-    setCount(count + window.innerHeight);
-  };
   return (
     <>
       <div

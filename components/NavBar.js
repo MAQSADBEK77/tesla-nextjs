@@ -1,9 +1,12 @@
 import { sideBarData } from "../data/SideBar";
 import css from "../styles/Home.module.css";
-import Link from "next/link";
 import SideBar from "./SideBar";
 import { useState } from "react";
+import { Link, animateScroll as scroll } from "react-scroll";
 function NavBar() {
+  const handleSetActive = (to) => {
+    console.log(to);
+  };
   const [sideBar, setSiteBar] = useState(false);
   const toogleSideBar = () => setSiteBar(!sideBar);
   return (
@@ -19,7 +22,16 @@ function NavBar() {
           </a>
           <div className={css.models} id="navbar-models">
             {sideBarData.map((item) => (
-              <Link key={item.title} href={item.path}>
+              <Link
+                key={item.title}
+                href={item.path}
+                activeClass="active"
+                to={"test" + item.id}
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+                onSetActive={handleSetActive}>
                 {item.title}
               </Link>
             ))}
