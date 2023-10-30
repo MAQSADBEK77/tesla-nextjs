@@ -9,11 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/react": "^11.9.0",
-    "@emotion/styled": "^11.8.1",
-    "next": "12.1.5",
-    "react": "18.0.0",
-    "react-dom": "18.0.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "next": "14.0.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "react-reveal": "^1.2.2"
   },
   "devDependencies": {
