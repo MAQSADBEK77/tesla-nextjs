@@ -1,5 +1,5 @@
 {
-  "name": "tesla-clone-app",
+  "name": "teslaclone2",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,14 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
-    "@mui/icons-material": "^5.14.15",
-    "@mui/material": "^5.14.15",
-    "firebase": "^10.5.2",
-    "next": "13.5.6",
-    "react": "^18",
-    "react-dom": "^18",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "next": "12.1.5",
+    "react": "18.0.0",
+    "react-dom": "18.0.0",
     "react-reveal": "^1.2.2"
+  },
+  "devDependencies": {
+    "eslint": "8.13.0",
+    "eslint-config-next": "12.1.5"
   }
 }
