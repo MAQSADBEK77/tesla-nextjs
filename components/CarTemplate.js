@@ -1,11 +1,10 @@
 import css from "../styles/CarTemplate.module.css";
 import downArrow from "../public/images/down-arrow.svg";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link, Element, animateScroll as scroll } from "react-scroll";
 function CarTemplate({
-  imgSrc,
   carName,
   carCost,
   carDescription,
@@ -24,7 +23,7 @@ function CarTemplate({
     <>
       <div
         data-aos="fade-down"
-        style={{ background: `url(${imgSrc.src})` }}
+        style={{ background: `url(images/model${id}.jpg)` }}
         className={css.CarTemplate}>
         <div className={css.texts}>
           <h1>{carName}</h1>
