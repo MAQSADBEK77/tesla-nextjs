@@ -66,6 +66,7 @@ a {
   background-color: #000000;
 }
 
+
 .x {
   gap: 0;
 }
@@ -87,7 +88,7 @@ a {
 .active {
   transform: translateX(0);
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1050px) {
   .sideBar-menu-btn {
     display: flex;
   }
