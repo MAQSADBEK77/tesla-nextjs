@@ -24,6 +24,7 @@ export default function Home() {
         carDescription=""
         demoTo="#"
         orderTo="#"
+        id="1"
       />
       <CarTemplate
         imgSrc={Model2}
@@ -32,6 +33,7 @@ export default function Home() {
         carDescription=""
         demoTo="#"
         orderTo="#"
+        id="2"
       />
       <CarTemplate
         imgSrc={Model3}
@@ -40,6 +42,7 @@ export default function Home() {
         carDescription="After Federal Tax Credit & Est. Gas Savings"
         demoTo="#"
         orderTo="#"
+        id="3"
       />
       <CarTemplate
         imgSrc={Model4}
@@ -48,6 +51,7 @@ export default function Home() {
         carDescription="After Est. Gas Savings"
         demoTo="#"
         orderTo="#"
+        id="4"
       />
       <CarTemplate
         imgSrc={Model5}
@@ -56,6 +60,7 @@ export default function Home() {
         carDescription="Retrofit panels for your existing roof"
         demoTo="#"
         orderTo="#"
+        id="5"
       />
       <CarTemplate
         imgSrc={Model6}
@@ -64,6 +69,7 @@ export default function Home() {
         carDescription="Produce Clean Energy From Your Roof"
         demoTo="#"
         orderTo="#"
+        id="6"
       />
     </>
   );
