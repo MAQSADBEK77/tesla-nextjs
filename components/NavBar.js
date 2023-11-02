@@ -38,7 +38,8 @@ function NavBar() {
           </div>
           <div className={css.menu} id="navbar-menu">
             <a href="#">Shop</a>
-            <a href="#">Accaunt</a>
+            <a href="/SignIn">Sign in</a>
+            <a href="/SignUp">Sign Up</a>
           </div>
           <div
             className={!sideBar ? "sideBar-menu-btn" : "sideBar-menu-btn x"}
