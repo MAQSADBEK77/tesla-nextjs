@@ -1,48 +1,68 @@
-// import { db } from "@/firebase/fireBaseConfig";
-// import { collection, addDoc } from "firebase/firestore";
-// import { useState } from "react";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase/FireBaseConfig";
+import { useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
+function SignIn() {
+  const route = useRouter();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    signInWithEmailAndPassword(auth, email, password)
+      .then((data) => {
+        setEmail("");
+        setPassword("");
+        alert("Login successfully!");
+        // route.push("/");
+        console.log(data);
+      })
+      .catch(() => {
+        alert("Login error !!! There is no such login password");
+      });
+  };
+  return (
+    <>
+      <form className="form" onSubmit={(e) => handleSubmit(e)}>
+        <div className="title">Tesla login accaunt</div>
 
-// async function addDataToFireStore(name, surname, email, password, massage) {
-//   try {
-//     const docRef = await addDoc(collection(db, "massages"), {
-//       name: name,
-//       surname: surname,
-//       email: email,
-//       password: password,
-//     });
-//     console.log("Document written with ID: ", docRef.id);
-//     return true;
-//   } catch (error) {
-//     console.log("Error adding document");
-//     return false;
-//   }
-// }
-// function SignIn() {
-//   const [name, setName] = useState("");
-//   const [surname, setSurname] = useState("");
-//   const [email, setEmail] = useState("");
-//   const [password, setPassword] = useState("");
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-//     const added = await addDataToFireStore(name, surname, email, password);
-//     if (added) {
-//       setName("");
-//       setSurname("");
-//       setEmail("");
-//       setPassword("");
-//       alert("Data added to firebase DB!!");
-//     }
-//   };
-//   return (
-//     <div className="signUp">
-//       <form onChange={(e) => handleSubmit(e)}>
-//         <label>
-//           <span>Name:</span>
-//           <input type="text" placeholder="Maqsadbek" />
-//         </label>
-//       </form>
-//     </div>
-//   );
-// }
+        <div className="input-container ic1">
+          <input
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            id="email"
+            className="input"
+            type="email"
+          />
+          <div className="cut cut-short" />
+          <label htmlFor="email" className="placeholder">
+            Email
+          </label>
+        </div>
+        <div className="input-container ic2">
+          <input
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+            id="password"
+            className="input"
+            type="password"
+          />
+          <div className="cut" />
+          <label htmlFor="password" className="placeholder">
+            Password
+          </label>
+        </div>
+        <button type="text" className="submit">
+          Login
+        </button>
+        <p>
+          Does your account not exist? <Link href="/SignUp"> Sign Up</Link>
+        </p>
+      </form>
+    </>
+  );
+}
 
-// export default SignIn;
+export default SignIn;

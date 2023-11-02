@@ -17,7 +17,7 @@ function SignUp() {
         route.push("/");
       })
       .catch((err) => {
-        alert("Create accaunt error - ", err);
+        alert("Create accaunt error. Such an account already exists !!!");
       });
   };
   return (
