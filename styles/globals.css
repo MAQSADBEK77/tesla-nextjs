@@ -166,7 +166,6 @@ a {
   display: flex;
   flex-direction: column;
   gap: 18px;
-  transform: translateY(-50px);
 }
 .sideBar-body a {
   color: #ffffff;
