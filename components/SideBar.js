@@ -1,6 +1,6 @@
 import { sideBarData } from "../data/SideBar";
 import { Link, animateScroll as scroll } from "react-scroll";
-
+import Linkk from "next/link";
 function SideBar({ sideBar, toogleSideBar }) {
   const handleSetActive = (to) => {
     console.log(to);
@@ -12,8 +12,8 @@ function SideBar({ sideBar, toogleSideBar }) {
       <div className={sideBar ? "sideBar active" : "sideBar NotActive"}>
         <div className="sideBar-body">
           <div className="sidebar-regstration">
-            <Link to="/SignUp">Sign In</Link>
-            <Link to="/SignUp">Sign Up</Link>
+            <Linkk href="/SignUp">Sign In</Linkk>
+            <Linkk href="/SignUp">Sign Up</Linkk>
           </div>
           {sideBarData.map((item) => (
             <Link

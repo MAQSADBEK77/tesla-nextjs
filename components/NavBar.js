@@ -3,6 +3,7 @@ import css from "../styles/Home.module.css";
 import SideBar from "./SideBar";
 import { useState } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
+import Linkk from "next/link";
 function NavBar() {
   const handleSetActive = (to) => {
     console.log(to);
@@ -37,9 +38,9 @@ function NavBar() {
             ))}
           </div>
           <div className={css.menu} id="navbar-menu">
-            <a href="#">Shop</a>
-            <a href="/SignIn">Sign in</a>
-            <a href="/SignUp">Sign Up</a>
+            <Linkk href="#">Shop</Linkk>
+            <Linkk href="/SignIn">Sign in</Linkk>
+            <Linkk href="/SignUp">Sign Up</Linkk>
           </div>
           <div
             className={!sideBar ? "sideBar-menu-btn" : "sideBar-menu-btn x"}
