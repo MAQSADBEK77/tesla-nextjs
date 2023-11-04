@@ -11,11 +11,14 @@ function SideBar({ sideBar, toogleSideBar }) {
         className={sideBar ? "backdrop" : "backdrop notActiveBackdrop"}></div>
       <div className={sideBar ? "sideBar active" : "sideBar NotActive"}>
         <div className="sideBar-body">
+          <div className="sidebar-regstration">
+            <Link to="/SignUp">Sign In</Link>
+            <Link to="/SignUp">Sign Up</Link>
+          </div>
           {sideBarData.map((item) => (
             <Link
               onClick={toogleSideBar}
               key={item.title}
-              href={item.path}
               activeClass="active"
               to={"test" + item.id}
               spy={true}
@@ -26,7 +29,7 @@ function SideBar({ sideBar, toogleSideBar }) {
               href={item.path}>
               {item.title}
             </Link>
-          ))}
+          ))}{" "}
         </div>
       </div>
     </>
